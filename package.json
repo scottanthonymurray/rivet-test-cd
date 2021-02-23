@@ -1,0 +1,19 @@
+{
+  "name": "rivet-test-cd",
+  "version": "1.0.0",
+  "description": "Rivet continuous deployment test repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottanthonymurray/rivet-test-cd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottanthonymurray/rivet-test-cd/issues"
+  },
+  "homepage": "https://github.com/scottanthonymurray/rivet-test-cd#readme"
+}
