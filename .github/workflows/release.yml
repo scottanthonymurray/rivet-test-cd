@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      # - run: npm ci
+      - run: npm ci
       # - name: Create artifact
       #   run: npm run asset:upload
       - name: Get package version
