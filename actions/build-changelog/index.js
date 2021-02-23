@@ -5,7 +5,7 @@ async function run() {
   try {
     const myToken = core.getInput('GITHUB_TOKEN');
     const version = core.getInput('version', { required: true });
-    const query = `type:pr+label:${version}`;
+    const query = `repo:scottanthonymurray/rivet-test-cd+type:pr+label:${version}`;
     const octokit = new github.getOctokit(myToken);
 
     const { data: pullRequest } = await octokit.search.issuesAndPullRequests({
