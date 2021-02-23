@@ -1,5 +1,5 @@
-const { GitHub } = require('@actions/github');
 const core = require('@actions/core');
+const { GitHub } = require('@actions/github');
 
 async function run() {
   try {
