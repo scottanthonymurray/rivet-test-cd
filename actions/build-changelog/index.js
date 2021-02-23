@@ -1,6 +1,8 @@
 const core = require('@actions/core');
 const { GitHub } = require('@actions/github');
 
+console.log(GitHub);
+
 async function run() {
   try {
     const myToken = core.getInput('GITHUB_TOKEN');
