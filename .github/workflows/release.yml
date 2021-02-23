@@ -33,12 +33,12 @@ jobs:
       - name: Get package version
         uses: ./actions/get-package-version
         id: get_package_version
-      # - name: Build changelog
-      #   uses: ./actions/build-changelog/
-      #   id: build_changelog
-      #   with:
-      #     version: ${{ steps.get_package_version.outputs.version }}
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      - name: Build changelog
+        uses: ./actions/build-changelog/
+        id: build_changelog
+        with:
+          version: ${{ steps.get_package_version.outputs.version }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
@@ -47,7 +47,7 @@ jobs:
         with:
           tag_name: v${{ steps.get_package_version.outputs.version }}
           release_name: Release v${{ steps.get_package_version.outputs.version }}
-          # body: ${{ steps.build_changelog.outputs.changelog }}
+          body: ${{ steps.build_changelog.outputs.changelog }}
           draft: true
       # - name: Upload release asset
       #   id: upload-release-asset
