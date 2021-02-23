@@ -1,14 +1,12 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-console.log(github);
-
 async function run() {
   try {
     const myToken = core.getInput('GITHUB_TOKEN');
     const version = core.getInput('version', { required: true });
     const query = `type:pr+label:${version}`;
-    const octokit = new github.GitHub(myToken);
+    const octokit = new github.getOctokit(myToken);
 
     const { data: pullRequest } = await octokit.search.issuesAndPullRequests({
       q: query
