@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/scottanthonymurray/rivet-test-cd/issues"
   },
-  "homepage": "https://github.com/scottanthonymurray/rivet-test-cd#readme"
+  "homepage": "https://github.com/scottanthonymurray/rivet-test-cd#readme",
+  "devDependencies": {
+    "@actions/core": "^1.2.6"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
 }
